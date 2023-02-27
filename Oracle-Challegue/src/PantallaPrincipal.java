@@ -3,8 +3,11 @@ import javax.swing.JOptionPane;
 public class PantallaPrincipal {
 	
 	public void VentanaPrincipal() {
-		String name = JOptionPane.showInputDialog("Tipo de nombre");
-		JOptionPane.showMessageDialog(null, "hello" +name);
+		Object[] op = {"Conversor de Moneda","Conversor de Masa"};
+		Object sel = JOptionPane.showInputDialog(null,"Seleccione una Opcion","Proyecto-Conversor",
+		JOptionPane.PLAIN_MESSAGE,null,op,op[0]);
+		
+		
 	}
 	
 }
