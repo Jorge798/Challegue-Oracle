@@ -17,6 +17,43 @@ public class ConversorDinero {
 		double yen = 0.051;
 		double won = 0.0052;
 		double res = 0.0;
+		
+		String sel = selMoneda.toString();
+		
+		switch(sel){
+			case "De Bolivianos a Dolares":
+				res = Moneda/dolar;
+				break;
+			case "De Bolivianos a Euros":
+				res = Moneda/euro;
+				break;
+			case "De Bolivianos a Libra":
+				res = Moneda/libra;
+				break;
+			case "De Bolivianos a Yen":
+				res = Moneda/yen;
+				break;
+			case "De Bolivianos a Won":
+				res = Moneda/won;
+				break;
+			case "De Dolares a Bolivianos":
+				res = Moneda*dolar;
+				break;
+			case "De Euros a Bolivianos":
+				res = Moneda*euro;
+				break;
+			case "De Libra a Bolivianos":
+				res = Moneda*libra;
+				break;
+			case "De Yen a Bolivianos":
+				res = Moneda*yen;
+				break;
+			case "De Won a Bolivianos":
+				res = Moneda*won;
+				break;
+			default:
+				break;
+		}
 	}
 	
 }
