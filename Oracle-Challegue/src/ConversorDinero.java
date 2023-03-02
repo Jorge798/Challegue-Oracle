@@ -56,4 +56,23 @@ public class ConversorDinero {
 		}
 	}
 	
+	public void MensajeError(){
+		PantallaPrincipal pp = new PantallaPrincipal();
+		double Moneda = 0.0;
+		String dato = JOptionPane.showInputDialog(null,"Mensaje","Entrada",JOptionPane.QUESTION_MESSAGE);
+		
+		if(dato != null){
+			try{
+				Moneda = Double.parseDouble(dato);
+			}catch(Exception ex){
+				System.out.println("No se puede convertir:" + ex);
+				JOptionPane.showMessageDialog(null, "Ingrese un dato valido");
+				pp.VentanaPrincipal();
+			}
+		}
+	}
+	
+	public void ConversionMoneda(){
+		
+	}
 }
