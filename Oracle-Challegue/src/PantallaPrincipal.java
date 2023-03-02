@@ -4,8 +4,6 @@ public class PantallaPrincipal {
 	
 	public void VentanaPrincipal() {
 		
-		ConversorDinero cd = new ConversorDinero();
-		
 		Object[] op = {"Conversor de Moneda","Conversor de Masa"};
 		
 		Object sel = JOptionPane.showInputDialog(null,"Seleccione una Opcion","Proyecto-Conversor",
@@ -13,15 +11,20 @@ public class PantallaPrincipal {
 		
 		String sl = op.toString();
 		
-		switch(sl){
+		if(sel!=null){
+			SeleccionarOpcion(sl);
+		}
+	}
+	
+	private void SeleccionarOpcion(String opcion){
 		
+		switch(opcion){
 			case "Conversor de Moneda":
+				ConversorDinero cd = new ConversorDinero();
 				cd.ConvertirMoneda();
 				break;
 			case "Conversor de Masa":
 				break;
-		
 		}
 	}
-	
-}
+}	

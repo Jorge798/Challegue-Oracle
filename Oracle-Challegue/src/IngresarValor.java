@@ -13,7 +13,7 @@ public class IngresarValor {
 	}
 	
 	public void RegistrarValor(){
-		String dato = JOptionPane.showInputDialog(null,"El valor que desea convertir","Ingrese",JOptionPane.QUESTION_MESSAGE);
+		String dato = JOptionPane.showInputDialog(null,"El valor que desea convertir es:","Entrada",JOptionPane.QUESTION_MESSAGE);
 		
 		if(dato!=null){
 			try{
