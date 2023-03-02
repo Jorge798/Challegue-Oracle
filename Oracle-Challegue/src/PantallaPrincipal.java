@@ -24,6 +24,8 @@ public class PantallaPrincipal {
 				cd.ConvertirMoneda();
 				break;
 			case "Conversor de Masa":
+				ConversorLongitud cl = new ConversorLongitud();
+				cl.convertirLongitud();
 				break;
 		}
 	}
