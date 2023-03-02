@@ -16,6 +16,7 @@ public class PantallaPrincipal {
 		switch(sl){
 		
 			case "Conversor de Moneda":
+				cd.ConvertirMoneda();
 				break;
 			case "Conversor de Masa":
 				break;
