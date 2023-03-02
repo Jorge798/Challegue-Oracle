@@ -65,12 +65,22 @@ public class ConversorLongitud {
 			default:
 				break;
 		}
-		JOptionPane.showMessageDialog(null,"Usted tiene "+Math.round(res*100.0)/100.0+" "+tipoLongitud);
+		JOptionPane.showMessageDialog(null,"En "+Longitud+" hay "+Math.round(res*100.0)/100.0+" "+tipoLongitud);
+		
+		int op = JOptionPane.showConfirmDialog(null,"¿Desea Seguir?", "Eliga una Opcion", JOptionPane.YES_NO_OPTION);
+		
+			if(JOptionPane.YES_OPTION == op){
+				PantallaPrincipal pp = new PantallaPrincipal();
+				pp.VentanaPrincipal();
+			}else{
+				JOptionPane.showMessageDialog(null,"Conversor Finalizada!");
+				System.exit(0);
+			}
 	}
 	
 	public void convertirLongitud(){
 		AgregarValor av = new AgregarValor();
-		av.RegistrarValor();
+		av.RegistrarValor("Conversor de Longitud");
 		seleccionarLongitud(av.getDato());
 	}
 }

@@ -68,11 +68,21 @@ public class ConversorDinero {
 				break;
 		}
 		JOptionPane.showMessageDialog(null,"Usted tiene "+Math.round(res*100.0)/100.0+" "+tipoMoneda);
+		
+		int op = JOptionPane.showConfirmDialog(null,"¿Desea Seguir?", "Eliga una Opcion", JOptionPane.YES_NO_OPTION);
+		
+		if(JOptionPane.YES_OPTION == op){
+			PantallaPrincipal pp = new PantallaPrincipal();
+			pp.VentanaPrincipal();
+		}else{
+			JOptionPane.showMessageDialog(null,"Conversor Finalizada!");
+			System.exit(0);
+		}
 	}
 	
 	public void ConvertirMoneda(){
 		AgregarValor av = new AgregarValor();
-		av.RegistrarValor();
+		av.RegistrarValor("Conversor de Dinero");
 		SeleccionarMoneda(av.getDato());
 	}
 }
