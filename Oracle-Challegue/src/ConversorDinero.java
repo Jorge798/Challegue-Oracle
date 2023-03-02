@@ -19,7 +19,7 @@ public class ConversorDinero {
 		double won = 0.0052;
 		double res = 0.0;
 		
-		String sel = selMoneda.toString();
+		String sel = selOpcion.toString();
 		
 		switch(sel){
 			case "De Bolivianos a Dolares":
@@ -55,6 +55,7 @@ public class ConversorDinero {
 			default:
 				break;
 		}
+		JOptionPane.showMessageDialog(null,"Usted tiene "+ res);
 	}
 	
 	public void ConvertirMoneda(){

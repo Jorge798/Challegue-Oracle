@@ -9,7 +9,7 @@ public class PantallaPrincipal {
 		Object sel = JOptionPane.showInputDialog(null,"Seleccione una Opcion","Proyecto-Conversor",
 		JOptionPane.PLAIN_MESSAGE,null,op,op[0]);
 		
-		String sl = op.toString();
+		String sl = sel.toString();
 		
 		if(sel!=null){
 			SeleccionarOpcion(sl);
