@@ -1,6 +1,7 @@
 import javax.swing.JOptionPane;
 
 public class ConversorDinero {
+	
 
 	private void SeleccionarMoneda(double Moneda){
 		
@@ -56,23 +57,9 @@ public class ConversorDinero {
 		}
 	}
 	
-	public void MensajeError(){
-		PantallaPrincipal pp = new PantallaPrincipal();
-		double Moneda = 0.0;
-		String dato = JOptionPane.showInputDialog(null,"Mensaje","Entrada",JOptionPane.QUESTION_MESSAGE);
-		
-		if(dato != null){
-			try{
-				Moneda = Double.parseDouble(dato);
-			}catch(Exception ex){
-				System.out.println("No se puede convertir:" + ex);
-				JOptionPane.showMessageDialog(null, "Ingrese un dato valido");
-				pp.VentanaPrincipal();
-			}
-		}
-	}
-	
-	public void ConversionMoneda(){
-		
+	public void ConvertirMoneda(){
+		IngresarValor iv = new IngresarValor();
+		iv.RegistrarValor();
+		SeleccionarMoneda(iv.getMoneda());
 	}
 }
